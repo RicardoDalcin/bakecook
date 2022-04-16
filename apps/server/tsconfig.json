@@ -1,0 +1,9 @@
+{
+  "extends": "tsconfig/server.json",
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "src/mikro-orm.config.ts"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./dist"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "tstock",
+  "version": "0.0.0",
+  "description": "Bake&cook's backend server",
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "node -r tsconfig-paths/register -r ts-node/register ./src/index.ts",
+    "ext": "ts, js"
+  },
+  "scripts": {
+    "watch": "tsc -w",
+    "dev": "nodemon",
+    "start": "node dist/index.js",
+    "typeorm": "typeorm-ts-node-commonjs"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.12",
+    "config": "*",
+    "nodemon": "^2.0.15",
+    "tsconfig": "*",
+    "typescript": "^4.5.3"
+  },
+  "dependencies": {
+    "apollo-server-express": "^3.6.7",
+    "express": "^4.17.3",
+    "graphql": "^15.3.0",
+    "pg": "^8.7.3",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.7.0",
+    "tsconfig-paths": "^3.14.1",
+    "type-graphql": "^1.1.1",
+    "typeorm": "^0.3.6"
+  }
+}
